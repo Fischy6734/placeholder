@@ -1,0 +1,19 @@
+<script>
+// Replace this value:
+const DEFAULT_URL = "https://gig-kilometers-mid-domain.trycloudflare.com/";
+
+// Iframe element
+const iframe = document.querySelector('iframe');
+
+// Set default
+iframe.src = DEFAULT_URL;
+
+// Save new URL when user edits this field:
+// Add input field somewhere in your HTML that calls:
+// saveUrl(document.getElementById('urlInput').value);
+function saveUrl(url) { localStorage.setItem('skinUrl', url); }
+
+// Load saved URL when page reloads
+const savedUrl = localStorage.getItem('skinUrl');
+if (savedUrl) iframe.src = savedUrl;
+</script>
